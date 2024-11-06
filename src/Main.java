@@ -3,7 +3,9 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
 
-        ContaCorrente c1 = new ContaCorrente(1, 1, "João");
+        Usuario titular = new Usuario("111.111.111-01", "João",
+                LocalDate.of(2005,10,15));
+        ContaCorrente c1 = new ContaCorrente(1, 1, titular);
 
         c1.depositar(200);
         if(c1.sacar(100)){
@@ -16,6 +18,7 @@ public class Main {
         }
 
         System.out.println(c1.getSaldo());
+        System.out.println(c1.getTitular().getNome().toUpperCase());
 
     }
 }

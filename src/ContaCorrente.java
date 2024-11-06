@@ -2,10 +2,10 @@ public class ContaCorrente {
 
     private final int agencia;
     private final int conta;
-    private String titular;
+    private Usuario titular;
     private float saldo;
 
-    public ContaCorrente(int agencia, int conta, String titular){
+    public ContaCorrente(int agencia, int conta, Usuario titular){
         this.agencia = agencia;
         this.conta = conta;
         this.titular = titular;
@@ -20,11 +20,11 @@ public class ContaCorrente {
         return conta;
     }
 
-    public String getTitular(){
+    public Usuario getTitular(){
         return titular;
     }
 
-    public void setTitular(String titular){
+    public void setTitular(Usuario titular){
         this.titular = titular;
     }
 
