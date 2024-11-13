@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -16,8 +17,15 @@ public class Main {
         Jogo jogo = new Jogo(numero);
 
         while (!jogo.isCompleto()){
-
+            System.out.println("Informe o número a ser jogado: ");
+            int n = scanner.nextInt();
+            if(jogo.adicionar(n)){
+                System.out.println("Número adicionado");
+            }
         }
+
+        //TODO: Apresentar os números ordenados e informar o preço
+        System.out.println("Seu jogo é: "+ Arrays.toString(jogo.getNumeros()));
 
     }
 

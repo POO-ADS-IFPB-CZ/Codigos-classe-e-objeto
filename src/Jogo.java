@@ -12,4 +12,14 @@ public class Jogo {
         return numerosAdicionados == numeros.length;
     }
 
+    public boolean adicionar(int numero){
+        //TODO: Adicionar condições de erro
+        numeros[numerosAdicionados++] = numero;
+        return true;
+    }
+
+    public int[] getNumeros(){
+        return numeros;
+    }
+
 }
