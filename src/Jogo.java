@@ -13,9 +13,22 @@ public class Jogo {
     }
 
     public boolean adicionar(int numero){
-        //TODO: Adicionar condições de erro
+        if(ehInvalido(numero) || estaContido(numero)){
+            return false;
+        }
         numeros[numerosAdicionados++] = numero;
         return true;
+    }
+
+    private boolean ehInvalido(int numero){
+        return numero <1 || numero >60;
+    }
+
+    private boolean estaContido(int numero){
+        for(int i: numeros){
+            if(i == numero) return true;
+        }
+        return false;
     }
 
     public int[] getNumeros(){

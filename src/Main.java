@@ -21,6 +21,8 @@ public class Main {
             int n = scanner.nextInt();
             if(jogo.adicionar(n)){
                 System.out.println("Número adicionado");
+            }else{
+                System.out.println("Número inválido");
             }
         }
 
