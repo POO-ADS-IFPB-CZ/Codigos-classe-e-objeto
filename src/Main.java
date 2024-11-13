@@ -1,19 +1,23 @@
 import java.time.LocalDate;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
 
-        Professor professor = new Professor(123,"João",
-                "Ciência da Computação");
+//        System.out.println(Arrays.toString(array));
+//        System.out.println(array.length);
 
-        Turma turma = new Turma(professor, "POO",
-                "2M345", "ADS", 2);
+//        array = Arrays.copyOfRange(array, 1,100);
+//        System.out.println(Arrays.toString(array));
 
-        turma.adicionarAluno(new Aluno(1, "João",
-                LocalDate.of(2000,2,4)));
-        turma.adicionarAluno(new Aluno(2, "Maria",
-                LocalDate.of(2001, 3,12)));
+//        char array[] = new char[10];
+//        Arrays.fill(array, 1, 5, 'A');
+//        System.out.println(Arrays.toString(array));
 
+        String array[] = {"Pedro", "Ana", "Jefferson", "Maria", "João", "ana"};
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.binarySearch(array, "Jefferson"));
 
     }
 
